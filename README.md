@@ -13,9 +13,7 @@ Use Scrapy and Splash to parse articles from [MarketWatch](https://www.marketwat
 
 ### Setting Up Environment
 
-First, install Splash. See [here](https://splash.readthedocs.io/en/stable/install.html#installation) for how to.
-
-Then install other packages by running
+First, install Splash. See [here](https://splash.readthedocs.io/en/stable/install.html#installation) for how to.Then go to you virtual environment install other packages by running
 ```console
 pip install -r requirements.txt
 ```
