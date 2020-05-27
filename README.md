@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ### Launch Splash and Set up the ocal address in `settings.py`
 
-Run code below in you shell(Linux) to run Splash locally. Make sure you set max-timeout to at least 100, the default is 30.For other system, please refer [Splash HTTP API](https://splash.readthedocs.io/en/stable/api.html#splash-http-api).
+Run code below in you shell(Linux) to run Splash locally. Make sure you set max-timeout to at least 100, or you will get `504 Time-Out` error .For other system, please refer [Splash HTTP API](https://splash.readthedocs.io/en/stable/api.html#splash-http-api).
 ```console
 sudo docker run -it -p 8050:8050 scrapinghub/splash --max-timeout 3600
 ```
