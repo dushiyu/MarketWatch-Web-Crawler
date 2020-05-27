@@ -25,7 +25,10 @@ Run code below in you shell(Linux) to run Splash locally. Make sure you set max-
 sudo docker run -it -p 8050:8050 scrapinghub/splash --max-timeout 3600
 ```
 
-Replace `SPLASH_URL` with your local Splash address in `marketwatch/settings.py`.
+Replace `SPLASH_URL` with your local Splash address in `marketwatch/settings.py`
+```python
+SPLASH_URL = 'http://127.0.0.1:8050/'
+```
 
 ### Set Dow Jones Account
 If you want to log in to parse the full articles, please replace username and password in `marketwatch/settings.py` with your own,
