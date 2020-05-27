@@ -1,4 +1,4 @@
-# News-Parsing-and-Sentiment-Anlaysis
+# MarketWatch-Web-Crawler
 
 Use Scrapy and Splash to parse articles from [MarketWatch](https://www.marketwatch.com/latest-news).
 
