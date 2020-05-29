@@ -1,15 +1,18 @@
-# MarketWatch-Web-Crawler
+# MarketWatch Web Crawler and Sentiment Analysis
 
-Use Scrapy and Splash to parse articles from [MarketWatch](https://www.marketwatch.com/latest-news).
+The major part of this project is to use Scrapy and Splash to parse articles from [MarketWatch](https://www.marketwatch.com/latest-news). The crawler is followed by sentiment analysis on the parsed articals with [VADER](https://github.com/cjhutto/vaderSentiment#about-the-scoring). I enhanced the sentiment words dictionary by [Loughran McDonald Sentiment Word Lists](https://sraf.nd.edu/textual-analysis/resources/).
 
 > MarketWatch is a website that provides financial information, business news, analysis, and stock market data. Along with The Wall Street Journal and Barron's, it is a subsidiary of Dow Jones & Company, a property of News Corp.
 
+> VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. 
+
 ## Highlights
 - Allow login to crawl full articles
-- Load full pages with Splash
-- Parse articles with Scrapy
+- Load full pages ('See More' botton) with Splash
+- Parse clean articles elements with Scrapy
+- Financial news sentiment analysis
 
-## Using
+## Using the Crawler
 
 ### Setting Up Environment
 
@@ -104,3 +107,15 @@ The output includes all avaialbe latest articles on marketwatch.com. They are so
     ]
 },...
 ```
+## Sentiment Analysis
+
+In `A-Simple-News-Sentiment-Analysis.ipynb`, I used VADER to generate the sentiment scores of parsed articles. The project includes:
+- use regular expression to clean the data
+- lemmatize tokens
+- sentiment analysis
+
+An example of sentiment score for an article with headline 'Spain to lift required two-week quarantine for foreign travelers on July 1' is 
+```json
+    {'neg': 0.02, 'neu': 0.772, 'pos': 0.207, 'compound': 0.9371}
+```
+The scores are generated based on the full article.
