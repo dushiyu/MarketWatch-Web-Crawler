@@ -118,4 +118,4 @@ An example of sentiment score for an article with headline 'Spain to lift requir
 ```json
     {'neg': 0.02, 'neu': 0.772, 'pos': 0.207, 'compound': 0.9371}
 ```
-The scores are generated based on the full article.
+The scores are generated based on the full article. See more details from the jupyter notebook.
